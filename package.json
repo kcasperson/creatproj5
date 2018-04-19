@@ -1,13 +1,13 @@
 {
-  "name": "lab4",
+  "name": "SimpleNote",
   "version": "1.0.0",
-  "description": "Todo List with Vue and Node",
+  "description": "Keep track of your notes",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Katelyn Casperson",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
