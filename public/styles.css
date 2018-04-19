@@ -1,0 +1,164 @@
+
+body {
+	background: url("flowers-forget-not.jpg") fixed center repeat;
+	/* background: #fff; */
+	margin: 0;
+	/* height: 1500px; */
+}
+table, td, #main {
+	background: transparent !important;
+}
+#main, .contentModule, table {
+	border: 0 !important;
+	height: auto;
+}
+#main {
+	width: 100%;
+	margin: 0;
+}
+#content {
+	width: 1000px;
+	margin: -3em auto;
+}
+body a {
+	color: white;
+}
+
+body, b, td, .medText, a {
+	font-family: Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	font-size: 12pt;
+	letter-spacing: 0.15em;
+	color: #black;
+	line-height: 200%;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.lead {
+	height: 50px;
+	top: 0;
+	padding-top: 5em;
+	min-height: 100%;
+	margin: 0 auto;
+}
+.lead a {
+	display: inline-block;
+	width: 19%;
+	margin: 0 -1%;
+}
+.lead img {
+	/* width: 100%; */
+	border: 10px solid transparent;
+}
+.lead a:hover img {
+	border-color: #ADBEF1;
+}
+.lead h1 {
+	display: inline;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: 	#ADBEF1;
+	/* background-color: #5F5f5f; */
+	background-color:rgba(41, 49, 12, 0.4);
+	/* opacity: .6; */
+}
+
+.lead h1::before {
+	background-color: #5F5f5f;
+	opacity: .4;
+}
+
+.blurb {
+	/* background: url("flowers-forget-not.jpg") fixed center repeat; */
+	background: #fff;
+	width: 100%;
+	margin-top: 8em;
+	padding: 1em 0;
+}
+
+.blurb a {
+	color: green;
+	font-weight: bold;
+	/* width: 46%; */
+	/* margin: 0 2.5% 3% 0;
+	float: left; */
+	/* text-align: justify; */
+}
+
+.blurb a:hover {
+	color: #ADBEF1;
+	/* color: red !important; */
+}
+
+.blurb img {
+	height: 180px;
+	width: auto;
+}
+
+.contain {
+	width: 700px;
+	margin: 0 auto;
+}
+.contain h1 {
+	font-size: 30px;
+	width: 100%;
+	color: 	#ADBEF1 !important;
+}
+
+.contain h3 {
+	font-family: Garamond;
+	font-size: 36px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: bold;
+	width: 100%;
+	color: 	#ADBEF1 !important;
+}
+
+
+.weatherR {
+	width: auto;
+}
+
+.weatherR img {
+	width: 50px
+}
+h1 {
+	text-transform: uppercase;
+	color: 	#ADBEF1;
+}
+h2 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.footer {
+		text-align: center;
+		height: 150px;
+		/* position: fixed; */
+		bottom: 0px;
+		left: 100px;
+}
+
+.footer a {
+	color: 	#ADBEF1 !important;
+	/* padding: 0.5em 1.5em; */
+	display: block;
+}
+/* .footer a:hover {
+	color: green;
+} */

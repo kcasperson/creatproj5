@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Directory</title>
+    <style>
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+      .en-markup-crop-options {
+          top: 18px !important;
+          left: 50% !important;
+          margin-left: -100px !important;
+          width: 200px !important;
+          border: 2px rgba(255,255,255,.38) solid !important;
+          border-radius: 4px !important;
+      }
+
+      .en-markup-crop-options div div:first-of-type {
+          margin-left: 0px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lead">
+    <div class="contain">
+      <h1>Katelyn Casperson's Projects</h1>
+    </div> </div>
+
+
+
+    <div class="blurb">
+    <div class="contain">
+      <div id="app">
+        <h3>Interactive Notebook</h3>
+        <p v-show="activeItems.length === 0">Your notebook is blank. Feel free to start fresh and add a note!</p>
+        <form v-on:submit.prevent="addItem">
+  	       <input type="text" v-model="text">
+           Note Type:
+           <input type="radio" value="1" checked="checked"> Home
+           <input type="radio" value="2"> School
+           <input type="radio" value="3"> Work
+  	       <button type="submit">Add</button>
+        </form>
+        <div class="controls">
+        	<button v-on:click="showAll()">Show All</button>
+        	<button v-on:click="showHome()">Show Home</button>
+        	<button v-on:click="showSchool()">Show School</button>
+        	<button v-on:click="showWork()">Show Work</button>
+        	<button v-on:click="showActive()">Show Active</button>
+        	<button v-on:click="showArchived()">Show Archived</button>
+        	<button v-on:click="deleteArchived()">Delete Archive</button>
+        </div>
+        <ul>
+        	<li v-for="item in filteredItems" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+        	  <input type="checkbox" v-model="item.archived" v-on:click="archiveItem(item)" /><label v-bind:class="{ archived: item.archived }">{{ item.text }}</label><button v-on:click="deleteItem(item)" class="delete">X</button>
+        	</li>
+        </ul>
+      </div>
+
+
+    </div></div>  <div class="lead">
+      </div>
+
+    <div class="blurb">
+    <div class="contain">
+
+      <h3> Web Development Work Samples </h3>
+
+      <h2>PoliRepo</h2>
+      <p> <a href="http://159.89.146.30/poli-repo/home.html">PoliRepo</a> was a coordinated project I developed with a friend to explore our skills.
+        Over several weeks and we used <i>javascript, CSS, & HTML </i>to help PoliRepo come to life.
+       We implemented APIs, tabs, flexboxes, and other important aspects of making a webpage layout.
+     </p>
+     <a href="http://159.89.146.30/poli-repo/home.html"><img src="polipic.png"></img></a>
+      <p> Check it out on my github <a href="https://github.com/kcasperson/political-repository"> here</a>.</p>
+
+      <br>
+
+      <h2>Lab 2</h2>
+      <p> This <a href="http://159.89.146.30/lab2/">project</a> was my first experience referencing APIs and using them to provide feedback on a webpage </p>
+      <a href="http://159.89.146.30/lab2/"><img src="lab2.png"></img></a>
+      <p> Check it out on my github <a href="https://github.com/kcasperson/lab2"> here</a>.</p>
+
+      <br>
+
+      <h2>Renovoting</h2>
+      <p> <a href="http://45.55.223.61:8000/#/vote">Renovoting</a> was another coordinated project with my developer friend.
+        We implemented a node server to store data and allow the user's interactions with the website to be recorded.
+        I completed all of the styling for this page.
+     </p>
+     <a href="http://45.55.223.61:8000/#/vote"><img src="renovote_pic.png"></img></a>
+      <p> Check it out on my friend's github <a href="https://github.com/ashtyng/renovoting/tree/master/renovoting"> here</a>. </p>
+
+      <br>
+
+      <h2>Lab 3</h2>
+      <p> For this <a href="http://159.89.146.30/lab3/"> project</a>,
+        I used Vue to build an application that uses an API to browse XKCD comics. </p>
+        <a href="http://159.89.146.30/lab2/"><img src="lab3.png"></img></a>
+        <p></p>
+
+      <br>
+
+      <h2>Leanne Rickords Photography</h2>
+      <p> In this <a href="http://159.89.146.30/leanne/"> project</a>,
+        I organized images for a photographer's website. I also implemented the use of a navigation bar.
+        The images can be seen under the <a href="http://159.89.146.30/leanne/gallery.html">portfolio</a> tab. </p>
+        <a href="http://159.89.146.30/leanne/gallery.html"><img src="portview.png"></img></a>
+        <p></p>
+
+      <br>
+
+      <p></p>
+  </div>
+</div>
+<div class="lead">
+</div>
+
+<div class="blurb">
+<div class="contain">
+
+    <h3> Machine Learning Projects</h3>
+
+  <h2>FirstNotebook</h2>
+  <p> This <a href="https://github.com/kcasperson/statistical-machine-learning-W18">project</a> was my first project in <b>PYTHON</b>. </p>
+  <!-- <a href="http://159.89.146.30/lab2/"><img src="lab2.png"></img></a> -->
+  <p> Check it out on my github <a href="https://github.com/kcasperson/statistical-machine-learning-W18"> here</a>.</p>
+
+  <br>
+
+  <h2>MNIST with KDE</h2>
+  <p> For this <a href="https://github.com/kcasperson/statistical-machine-learning-W18/blob/master/MNIST%20with%20KDE">project</a>, I used a <i>kernel density estimator</i> to create a class-conditional visualization. </p>
+  <!-- <a href="http://159.89.146.30/lab2/"><img src="lab2.png"></img></a> -->
+  <p> Check it out on my github <a href="
+  https://github.com/kcasperson/statistical-machine-learning-W18/blob/master/MNIST%20with%20KDE"> here</a>.</p>
+
+  <br>
+
+  <h2>Gaussian Process Regression</h2>
+  <p> For this <a href="https://github.com/kcasperson/statistical-machine-learning-W18/blob/master/GaussianProcessRegression">project</a>, I used <i>gaussian process regression</i> to generate nonparametric regressions with confidence intervals. </p>
+  <!-- <a href="http://159.89.146.30/lab2/"><img src="lab2.png"></img></a> -->
+  <p> Check it out on my github <a href="https://github.com/kcasperson/statistical-machine-learning-W18/blob/master/GaussianProcessRegression"> here</a>.</p>
+
+  <br>
+
+  <h2>Expectation Maximization</h2>
+  <p> In this <a href="https://github.com/kcasperson/statistical-machine-learning-W18/blob/master/ExpectationMaximization">project</a>, I used the <i>Expectation Maximization</i> (EM) method to learn the parameters of a Gaussian mixture model. </p>
+  <!-- <a href="http://159.89.146.30/lab2/"><img src="lab2.png"></img></a> -->
+  <p> Check it out on my github <a href="https://github.com/kcasperson/statistical-machine-learning-W18/blob/master/ExpectationMaximization"> here</a>.</p>
+
+  <br>
+
+
+</div>
+</div>
+
+<div class="lead">
+</div>
+
+<footer>
+  <a href="https://www.lds.org/media-library/images/category/flowers?lang=eng">Photo Credit</a>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
